@@ -1,0 +1,12 @@
+{% extends "session/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1>Crear nuevo Proyecto</h1>
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}  
+      <button type="submit">Crear Proyecto</button>
+    </form>
+
+{% endblock %}
