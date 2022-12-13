@@ -7,7 +7,7 @@ from .forms import ProyectoForm
 
 # Create your views here.
 
-#@login_required
+@login_required
 def home(request):
     proyectos=Proyecto.objects.all()
     context={
